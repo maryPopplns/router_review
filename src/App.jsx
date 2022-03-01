@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import { useState } from 'react';
 import './App.css';
 
@@ -11,6 +11,7 @@ function App() {
         <br></br>
         <Link to='/expenses'>Expenses</Link>
       </nav>
+      <Outlet />
     </div>
   );
 }

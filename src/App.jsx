@@ -7,9 +7,9 @@ function App() {
     <div>
       <h1>Bookkeeper!</h1>
       <nav>
-        <Link to='/invoices'>Invoices</Link>
+        <Link to='invoices'>Invoices</Link>
         <br></br>
-        <Link to='/expenses'>Expenses</Link>
+        <Link to='expenses'>Expenses</Link>
       </nav>
       <Outlet />
     </div>

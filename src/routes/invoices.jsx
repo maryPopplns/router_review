@@ -32,7 +32,7 @@ export default function Invoices() {
             let name = invoice.name.toLowerCase();
             return name.startsWith(filter.toLowerCase());
           })
-          .map((invoice, i) => {
+          .map((invoice) => {
             return queryNavLink({
               to: `/invoices/${invoice.number}`,
               name: invoice.name,

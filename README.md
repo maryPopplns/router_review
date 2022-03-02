@@ -75,3 +75,39 @@ export default function Invoice() {
         }
       />
 ```
+
+- Active routes allow conditional styling
+
+```
+          <NavLink
+            style={({ isActive }) => {
+              return {
+                display: "block",
+                margin: "1rem 0",
+                color: isActive ? "red" : "",
+              };
+            }}
+            to={`/invoices/${invoice.number}`}
+            key={invoice.number}
+          >
+            {invoice.name}
+          </NavLink>
+```
+
+- Search Params : allows you to easily access search parameters, and set seach parameters as well
+
+```
+let [searchParams, setSearchParams] = useSearchParams();
+
+<input
+value={searchParams.get("filter") || ""}
+onChange={(event) => {
+  let filter = event.target.value;
+  if (filter) {
+    setSearchParams({ filter });
+  } else {
+    setSearchParams({});
+  }
+}}
+/>
+```

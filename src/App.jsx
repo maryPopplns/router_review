@@ -1,8 +1,14 @@
-import { Link, Outlet } from 'react-router-dom';
+import { useNavigate, Link, Outlet } from 'react-router-dom';
 import { useState } from 'react';
 import './App.css';
 
 function App() {
+  let navigate = useNavigate();
+
+  function clickHandler() {
+    navigate('/');
+  }
+
   return (
     <div>
       <h1>Bookkeeper!</h1>
@@ -10,6 +16,8 @@ function App() {
         <Link to='invoices'>Invoices</Link>
         <br></br>
         <Link to='expenses'>Expenses</Link>
+        <br></br>
+        <button onClick={clickHandler}>navigate</button>
       </nav>
       <Outlet />
     </div>
